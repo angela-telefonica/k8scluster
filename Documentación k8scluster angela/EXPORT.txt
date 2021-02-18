@@ -1,0 +1,5 @@
+export OSM_HOSTNAME=192.168.159.59
+export OSM_SOL005=True
+export OSM_USER=angela
+export OSM_PASSWORD=superangela
+export OSM_PROJECT=Kubernetes

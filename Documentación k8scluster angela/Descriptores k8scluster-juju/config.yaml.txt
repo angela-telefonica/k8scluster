@@ -1,0 +1,33 @@
+---
+additionalParamsForVnf:
+  -
+    member-vnf-index: k8s_juju
+    additionalParams:
+        MACHINE1: "192.168.165.140"
+        MACHINE2: "192.168.165.86"
+        MACHINE3: ""
+        MACHINE4: ""
+        MACHINE5: ""
+        MACHINE6: ""
+        MACHINE7: ""
+        MACHINE8: ""
+        MACHINE9: ""
+        MACHINE10: ""
+        BUNDLE: ""
+vld:
+  -
+    name: management_network
+    vim-network-name: management_network              #The network in the VIM to connect all nodes of the clusters
+    vnfd-connection-point-ref:
+      -
+        ip-address: "192.168.165.140"
+        member-vnf-index-ref: k8s_vnf3
+        vnfd-connection-point-ref: mgmt
+      -
+        ip-address: "192.168.165.86"
+        member-vnf-index-ref: k8s_vnf4
+        vnfd-connection-point-ref: mgmt
+      -
+        ip-address: "192.168.165.92"
+        member-vnf-index-ref: k8s_juju
+        vnfd-connection-point-ref: mgmt
